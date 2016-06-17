@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{%block formulario%}
+  <form action="/hoteles_filt" method=POST>
+    <select name="Categ" value = "Categoria">
+      <option selected > Elige una Categoria </option>
+        <option value="all">All</option>
+        <option value="Hoteles">Hoteles</option>
+        <option value="Hostales">Hostales</option>
+        <option value="Albergues">Albergues</option>
+        <option value="Apartahoteles">Apartahoteles</option>
+        <option value="Pensiones">Pensiones</option>
+    </select>
+    <select name="SubCateg" value = "SubCateg">
+      <option selected > Elige una Subcategoria </option>
+        <option value="all">All</option>
+        <optgroup label="Hoteles/Pensiones/Hostales">
+          <option value="1 estrella">1 estrella</option>
+          <option value="2 estrellas">2 estrellas</option>
+          <option value="3 estrellas">3 estrellas</option>
+          <option value="4 estrellas">4 estrellas</option>
+          <option value="5 estrellas">5 estrellas</option>
+          <option value="5 estrellas Gran Lujo">5 estrellas Gran Lujo</option>
+        <optgroup label="Apartahoteles">
+          <option value="1 llave">1 llave</option>
+          <option value="2 llaves">2 llaves</option>
+          <option value="3 llaves">3 llaves</option>
+          <option value="4 llaves">4 llaves</option>
+          <option value="5 llaves">5 llaves</option>
+    </select>
+    <input type="submit" Value = "Filtrar">
+    <input type="reset" value="Borrar seleccion">
+  </form>
+{%endblock%}

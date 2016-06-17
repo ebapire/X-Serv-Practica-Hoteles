@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>
+    {% block title %}
+    Practica final. Eva Garcia.
+    {% endblock %}
+  </title>
+</head>
+
+<body>
+
+  <div id = banner>
+    {% block banner %}
+    <a href="/"><img src="http://resources.touropia.com/gfx/d/best-places-to-visit-in-spain/madrid.jpg"></a>
+    {% endblock %}
+  </div>
+
+  <div id = 'loginout'>
+    {% block login %}
+      <form id='login' action='/login' method='POST' accept-charset='UTF-8'>
+        <label for='User' >User:</label>
+        <input type='text' maxlength="50" />
+
+        <label for='Password' >Password:</label>
+        <input type='password' maxlength="50" />
+
+        <input type='submit' value='Login' />
+      </form>
+    {% endblock %}
+    {% block logout  %}
+      <form id ='/logout' action="logout">
+        <input type='submit' value='Logout' />
+      </form>
+    {% endblock %}
+  </div>
+
+  <div id = "sidebar">
+    {% block sidebar %} {{sidebar|safe}} {% endblock %}
+  </div>
+
+  <div id = formulario>
+    {%block formulario%}{%endblock%}
+  </div>
+
+
+  <div id = "content">
+    {%block content %}
+      {{content|safe}}
+    {% endblock %}
+  </div>
+
+  {%block about%}
+    <a href = '/about'> About</a>
+  {% endblock %}
+  <div id = "pie">
+    {% block pie %}
+      Esta aplicacion utiliza datos del portal de datos abiertos de la ciudad de Madrid
+      <a href='http://www.esmadrid.com/opendata/alojamientos_v1_es.xml "'> Mas Informacion</a>
+    {% endblock %}
+  </div>
+</body>
+
+</html>
