@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-{%block login%}{%endblock%}
+{%block logout%}{%endblock%}
 
 {%block formulario%}
   <form action="/hoteles_filt" method=POST>
     <select class = "btn" name="Categ" value = "Categoria">
-      <option class = "btn" selected > Elige una Categoria </option>
+      <option selected > Elige una Categoria </option>
         <option value="Hoteles">Hoteles</option>
         <option value="Hostales">Hostales</option>
         <option value="Albergues">Albergues</option>

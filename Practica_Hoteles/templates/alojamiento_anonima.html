@@ -1,3 +1,15 @@
 {% extends "base.html" %}
 
 {%block logout%}{%endblock%}
+{%block formulario%}
+
+  <form action={{path}} method=POST>
+    <select class = "btn" name="Idioma" value = "Idioma">
+      <option  selected > Need other language? </option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+    </select>
+    <button type="submit">Choose</button>
+    <button type="reset">Clean</button>
+  </form>
+{%endblock%}

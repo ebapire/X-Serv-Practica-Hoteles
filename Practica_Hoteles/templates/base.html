@@ -6,36 +6,48 @@
     Practica final. Eva Garcia.
     {% endblock %}
   </title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+    body{
+      background-color: {{color|safe}};
+      font-size: {{letra|safe}};
+    }
+  </style>
 </head>
 
 <body>
-
-  <div id = banner>
+  <div><h1>~ Madrid ~</h1></div>
+  <div >
     {% block banner %}
-    <a href="/"><img src="http://resources.touropia.com/gfx/d/best-places-to-visit-in-spain/madrid.jpg"></a>
+    <a href="/" style="width: 100%; height:10%">
+      <img id ="banner" src="/css/images/madrid.jpg" height ='200px' width='100%'>
+    </a>
     {% endblock %}
   </div>
+  <hr>
+  <button id="ab" class="btn">
+    <a href = 'http://localhost:8000/about'> About</a>
+  </button>
 
+  <button id = "hotls">
+      <a href = '/alojamientos'> Mira todos los hoteles</a>
+  </button>
   <div id = 'loginout'>
     {% block login %}
-      <form id='login' action='/login' method='POST' accept-charset='UTF-8'>
-        <label for='User' >User:</label>
-        <input type='text' maxlength="50" />
-
-        <label for='Password' >Password:</label>
-        <input type='password' maxlength="50" />
-
-        <input type='submit' value='Login' />
+      <form id='login'  action='/login'>
+        <input class = "btn" type='submit' value='Login' />
       </form>
     {% endblock %}
     {% block logout  %}
-      <form id ='/logout' action="logout">
-        <input type='submit' value='Logout' />
+      <form id ='logout' action="/logout">
+        <input  class = "btn" type='submit' value='Logout' />
       </form>
+
     {% endblock %}
   </div>
-
-  <div id = "sidebar">
+  <hr>
+  <div>
     {% block sidebar %} {{sidebar|safe}} {% endblock %}
   </div>
 
@@ -50,15 +62,11 @@
     {% endblock %}
   </div>
 
-  {%block about%}
-    <a href = '/about'> About</a>
-  {% endblock %}
-  <div id = "pie">
+  <footer>
     {% block pie %}
       Esta aplicacion utiliza datos del portal de datos abiertos de la ciudad de Madrid
       <a href='http://www.esmadrid.com/opendata/alojamientos_v1_es.xml "'> Mas Informacion</a>
     {% endblock %}
-  </div>
+  </footer>
 </body>
-
 </html>

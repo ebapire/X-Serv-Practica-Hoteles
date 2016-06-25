@@ -7,6 +7,9 @@ class Hotel(models.Model):
     SubCateg = models.CharField(max_length = 32, default = "")
     Descrip = models.TextField(default = "")
     Direccion = models.TextField(default = "")
+    latitude = models.TextField(default = "")
+    longitude = models.TextField(default = "")
+    zipcode = models.TextField(default = "")
     Url = models.TextField()
     telefono = models.CharField(max_length = 32)
     tot_comentarios = models.IntegerField(default = 0)
@@ -16,6 +19,7 @@ class Imagen(models.Model):
     Hotel_id = models.ForeignKey('Hotel', on_delete=models.CASCADE)
 
 class Comentario(models.Model):
+    User = models.CharField(max_length = 32, default = "")
     Date = models.DateTimeField(auto_now=False, auto_now_add=False)
     body = models.TextField(default = "")
     Hotel_id = models.ForeignKey('Hotel', on_delete=models.CASCADE)
@@ -27,7 +31,7 @@ class Hotel_selecc (models.Model):
 
 class CSS (models.Model):
     User = models.CharField(max_length = 32)
-    Letra =  models.IntegerField()
+    Letra =  models.CharField(max_length = 32, default = "100%")
     Color = models.CharField(max_length = 32, default = 'black')
 
 class Titulo(models.Model):

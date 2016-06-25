@@ -1,0 +1,36 @@
+.sidebar{
+  position: relative;
+  float: right;
+}
+body{
+	margin: 1%;
+	padding: 1%;
+  font-family: arial, sans-serif;
+}
+.imagenPeq{
+  width: 10%;
+  height: 10%;
+}
+
+#ab, #hotls{
+  width: 100%;
+}
+
+.btn, button{
+  border: 2px solid;
+  padding: 10px 40px;
+  border-radius: 12px;
+}
+
+#loginout{
+  text-align: center;
+}
+
+footer{
+  text-align: center;
+  font-size: 12px;
+}
+h1{
+  text-align: center;
+  font-family: Edwardian Script
+}

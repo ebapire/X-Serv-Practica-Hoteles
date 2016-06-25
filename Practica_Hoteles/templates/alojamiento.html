@@ -5,7 +5,19 @@
 
 {%block formulario%}
   <form action="" method="POST">
-    <textarea name="comentarios" value = "Comm" rows="10" cols="40">Escribe aquí tu comentario</textarea>
-    <input type="submit" value="Anadir comentario">
+    <textarea class = btn name="comentarios" value = "Comm" rows="10" cols="40">Escribe aquí tu comentario</textarea>
+    <button type="submit"> Añadir comentario</button>
+  </form>
+  <form action"" method = "POST">
+    <button type="submit">Añadir a mi colección</button>
+  </form>
+  <form action={{path}} method=POST>
+    <select class = "btn" name="Idioma" value = "Idioma">
+      <option class = "btn" selected > Need other language? </option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+    </select>
+    <button type="submit">Choose</button>
+    <button type="reset">Clean</button>
   </form>
 {%endblock%}

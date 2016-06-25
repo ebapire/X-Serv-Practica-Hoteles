@@ -4,6 +4,36 @@
 {%block title%}
   {{title}}
 {%endblock%}
-{% block content %}
-  {{content | safe}}
-{% endblock %}
+
+{%block login%}{%endblock%}
+
+{%block formulario%}
+  <form id = CSS action="/anadir_css" method=POST>
+    <select class = "btn" name="Letra" value = "Letra">
+      <option selected > Elige un tamaño de letra </option>
+        <option value="200%">200%</option>
+        <option value="250%">250%</option>
+        <option value="300%">300%</option>
+        <option value="350%">350%</option>
+        <option value="400%">400%</option>
+    </select>
+    <select class = "btn" name="Color" value = "Color">
+      <option selected > Elige un color de fondo </option>
+        <option value="red">Rojo</option>
+        <option value="aqua">Azul</option>
+        <option value="olive">Verde oscuro</option>
+        <option value="greenyellow">Verde</option>
+        <option value="pink">Rosa</option>
+    </select>
+    <input class = "btn" type="submit" Value = "Añadir">
+    <input class = "btn" type="reset" value="Borrar seleccion">
+  </form>
+  <form id = titulo action="" method="POST">
+    <label> Título de tu pagina </label>
+      <input class = "btn" type="text" name = "titulo">
+      <input class = "btn" type="submit" value="Añadir">
+  </form>
+  <form action={{path}}>
+    <button > Página en XML </button>
+  </form>
+{%endblock%}
