@@ -1,10 +1,16 @@
-Nombre y titulación: Eva García Domingo
-Usuario en linux: egarcia
-Usuario en GitHub: ebapire
+<b>Nombre y titulación:</b> Eva García Domingo<br>
+<b>Usuario en linux:</b> egarcia<br>
+<b>Usuario en GitHub:</b> ebapire<br>
 
-Parte obligatoria: 
-Lista de funcionalidades opcionales que se hayan implementado, y breve
-descripci ́on de cada una.
-URL del v ́ıdeo demostraci ́on de la funcionalidad b ́asica
-URL del v ́ıdeo demostraci ́on de la funcionalidad optativa, si se ha rea-
-lizado funcionalidad optativa
+<b>Parte obligatoria: <br>
+  -En vez de haber un enlace al home, este enlace es el propio banner.<br>
+  
+  
+<b>Parte opcional</b><br>
+  -Uso de favicon.ico<br>
+  -Uso de HTML5: button, footer<br>
+  -CSS propio en vez de reutilizado de terceros<br>
+  (No hay vídeo pues son cosas de código, no de funcionalidad de la aplicación)
+
+<b> Video demostración
+
