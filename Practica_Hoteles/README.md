@@ -2,7 +2,7 @@
 <b>Usuario en linux:</b> egarcia<br>
 <b>Usuario en GitHub:</b> ebapire<br>
 
-<b>Parte obligatoria: <br>
+<b>Parte obligatoria: </b><br>
   -En vez de haber un enlace al home, este enlace es el propio banner.<br>
   
   
