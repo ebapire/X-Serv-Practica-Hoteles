@@ -322,7 +322,13 @@ def idioma(request, id_aloj):
                 lista_hotel += "<br>" + h["body"]
         path = "/alojamiento/" + id_aloj + "/idioma"
         template = loader.get_template("alojamiento.html")
-        contexto = {'content': lista_hotel+lista_cmm+lista_imagenes, 'path': path}
+        (is_authenticated, user) = comprobar_auten(request)
+        if is_authenticated:
+            (letra, color) = comprobar_css(user)
+            template = loader.get_template("alojamientos.html")
+            contexto = {'content': lista_hotel+lista_cmm+lista_imagenes, 'path': path,'letra': letra, 'color': color}
+        else:
+            contexto = {'content': lista_hotel+lista_cmm+lista_imagenes, 'path': path}
         return HttpResponse(template.render(Context(contexto)))
 
 
