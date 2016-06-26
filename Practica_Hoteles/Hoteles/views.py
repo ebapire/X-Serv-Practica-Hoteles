@@ -137,7 +137,7 @@ def hotel_completo (id):
 
     if comentarios:
         for comentario in comentarios:
-            lista_cmm = "<li>" + comentario.User + ": " + comentario.body
+            lista_cmm += "<li>" + comentario.User + ": " + comentario.body
     if images:
         i = 0
         for image in images:
